@@ -18,9 +18,9 @@ class Cliente extends Conexion{
     public function guardar(){
         // Validar el NIT antes de guardar los datos
         if (!$this->validarNit($this->cliente_nit)) {
-            echo "El NIT ingresado es inválido. No se guardarán los datos.";
+            //echo "El NIT ingresado es inválido. No se guardarán los datos.";
             // Detener la ejecución del código o redirigir a otra página, según sea necesario
-            exit();
+            //exit();
         }
     
         $sql = "INSERT INTO clientes (cliente_nombre, cliente_nit) VALUES ('$this->cliente_nombre','$this->cliente_nit')";
