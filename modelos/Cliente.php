@@ -34,4 +34,21 @@ class Cliente extends Conexion{
         
         return $resultado;
     }
-    
+    public function buscar(){
+        $sql = "SELECT * from clientes where cliente_situacion = 1 ";
+
+        if($this->cliente_nombre != ''){
+            $sql .= " and cliente_nombre like '%$this->cliente_nombre%' ";
+        }
+
+        if($this->cliente_nit != ''){
+            $sql .= " and cliente_nit = $this->cliente_nit ";
+        }
+
+        if($this->cliente_id != null){
+            $sql .= " and cliente_id = $this->cliente_id ";
+        }
+
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
