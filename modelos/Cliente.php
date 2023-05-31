@@ -52,3 +52,16 @@ class Cliente extends Conexion{
         $resultado = self::servir($sql);
         return $resultado;
     }
+    public function modificar(){
+        $sql = "UPDATE clientes  SET cliente_nombre = '$this->cliente_nombre', cliente_nit = $this->cliente_nit where cliente_id = $this->cliente_id";
+        
+        $resultado = self::ejecutar($sql);
+        return $resultado;
+    }
+
+    public function eliminar(){
+        $sql = "UPDATE clientes  SET cliente_situacion = 0 where cliente_id = $this->cliente_id";
+        
+        $resultado = self::ejecutar($sql);
+        return $resultado;
+    }
