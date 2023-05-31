@@ -65,3 +65,30 @@ class Cliente extends Conexion{
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
+    public function validarNit($cliente_nit){
+        // Eliminar cualquier guión o espacio en blanco del NIT
+        $cliente_nit = str_replace(['-', ' '], '', $cliente_nit);
+    
+        // Verificar si el NIT tiene 8 dígitos
+        if (strlen($cliente_nit) !== 8) {
+            return false;
+        }
+    
+        // Realizar la validación del NIT según el algoritmo dado
+        $suma = 0;
+        for ($i = 0; $i < 7; $i++) {
+            $suma += intval($cliente_nit[$i]) * (8 - $i);
+        }
+        $residuo = $suma % 11;
+        $respuesta = 11 - $residuo;
+    
+        $digitoVerificador = intval($cliente_nit[7]);
+    
+        // Comprobar si el residuo es igual al dígito verificador
+        if ($respuesta == $digitoVerificador || ($respuesta == 10 && $digitoVerificador == 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
