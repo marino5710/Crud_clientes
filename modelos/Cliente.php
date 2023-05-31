@@ -1,6 +1,7 @@
 <?php
 require 'Conexion.php';
-include '../includes/header.php';
+include_once '../includes/header.php';
+
 
 
 class Cliente extends Conexion{

@@ -6,16 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
-        body{
-            /* background-image: url('/crudphp18may2023/assets/images/fondo.jpg') !important;
-            background-size:cover; */
+     
 
-        }
-
-        
-    body {
-        /* Agrega aquí tus estilos personalizados para el cuerpo de la página */
-    }
     .invalid-nit {
         font-size: 24px;
         color: red;
