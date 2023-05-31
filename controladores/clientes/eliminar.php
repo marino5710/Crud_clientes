@@ -48,7 +48,7 @@ require '../../modelos/Cliente.php';
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/practica_8/controladores/clientes/buscar.php" class="btn btn-info">Volver al formulario</a>
+                <a href="/Crud_clientes/controladores/clientes/buscar.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>
