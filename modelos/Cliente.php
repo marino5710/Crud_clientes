@@ -1,6 +1,6 @@
 <?php
 require 'Conexion.php';
-include_once '../includes/header.php';
+include '../includes/header.php';
 
 
 class Cliente extends Conexion{
@@ -20,11 +20,9 @@ class Cliente extends Conexion{
     public function guardar(){
         // Validar el NIT antes de guardar los datos
         if (!$this->validarNit($this->cliente_nit)) {
-            
-           echo '<div class="alert alert-success" role="alert">';
-            echo "El NIT ingresado es inválido. No se guardarán los datos.";
-            echo '</div>';
-            // Detener la ejecución del código o redirigir a otra página, según sea necesario
+            echo '<h3 class="invalid-nit">El NIT ingresado es inválido. No se guardarán los datos.</h3>';
+            // Mostrar el botón 
+            echo '<button class="return-button" onclick="window.history.back();">Regresar al formulario</button>';
             exit();
         }
     

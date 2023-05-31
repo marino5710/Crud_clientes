@@ -11,6 +11,26 @@
             background-size:cover; */
 
         }
+
+        
+    body {
+        /* Agrega aquí tus estilos personalizados para el cuerpo de la página */
+    }
+    .invalid-nit {
+        font-size: 24px;
+        color: red;
+        margin-bottom: 20px;
+    }
+    .return-button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
     </style>
     <title>App de Tienda</title>
 </head>
