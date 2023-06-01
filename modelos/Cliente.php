@@ -1,6 +1,6 @@
 <?php
 require 'Conexion.php';
-include_once '../includes/header.php';
+include_once './includes/header.php';
 
 
 
@@ -21,11 +21,16 @@ class Cliente extends Conexion{
     public function guardar(){
         // Validar el NIT antes de guardar los datos
         if (!$this->validarNit($this->cliente_nit)) {
-            echo '<h3 class="invalid-nit">El NIT ingresado es inválido. No se guardarán los datos.</h3>';
+            echo '<div style="background-color: #dc3545; color: #fff; padding: 10px;">
+                    El NIT ingresado es inválido. No se guardarán los datos.
+                  </div>';
             // Mostrar el botón 
-            echo '<button class="return-button" onclick="window.history.back();">Regresar al formulario</button>';
+            echo '<button style="background-color: #343a40; color: #fff; padding: 10px; border: none; cursor: pointer;" onclick="window.history.back();">Regresar al formulario</button>';
             exit();
         }
+    
+    
+    
     
         $sql = "INSERT INTO clientes (cliente_nombre, cliente_nit) VALUES ('$this->cliente_nombre','$this->cliente_nit')";
         $resultado = self::ejecutar($sql);
